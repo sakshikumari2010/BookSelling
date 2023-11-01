@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<style>
+    /* Basic styles for the search bar */
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .search-container {
+        margin: 20px;
+    }
+
+    #search-input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    #search-button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    /* Style the search results area */
+    #search-results {
+        margin-top: 20px;
+        text-align: left;
+    }
+</style>
+
+<body>
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search...">
+        <button id="search-button">Search</button>
+    </div>
+    <div id="search-results">
+        <!-- Search results will be displayed here -->
+    </div>
+    <script>
+        // Function to perform a search
+        function performSearch() {
+            const searchInput = document.getElementById('search-input');
+            const searchQuery = searchInput.value;
+
+            // You can implement your search logic here, e.g., make an API request to fetch search results.
+            // For now, we'll just display a message.
+
+            const searchResults = document.getElementById('search-results');
+            searchResults.innerHTML = `<p>Search results for: ${searchQuery}</p>`;
+        }
+
+        // Attach the performSearch function to the search button
+        const searchButton = document.getElementById('search-button');
+        searchButton.addEventListener('click', performSearch);
+
+    </script>
+    <!-- <script src="script.js"></script> -->
+</body>
+
+</html>

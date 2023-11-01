@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Selling Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .book-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 300px;
+            text-align: center;
+        }
+        .book-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .book-author {
+            font-size: 16px;
+        }
+        .search-bar {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
+        .search-input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="book-card">
+        <h1 class="book-title">Book Title</h1>
+        <p class="book-author">Author Name</p>
+    </div>
+    <div class="search-bar">
+        <input type="text" class="search-input" placeholder="Search for books...">
+        <button class="search-button" onclick="searchBooks()">Search</button>
+    </div>
+
+    <script>
+        function searchBooks() {
+            const searchTerm = document.querySelector('.search-input').value;
+            // You can implement your book search logic here, e.g., make an API request to fetch books.
+            alert(`Searching for: ${searchTerm}`);
+        }
+    </script>
+</body>
+</html>
